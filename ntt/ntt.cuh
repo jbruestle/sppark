@@ -22,7 +22,7 @@ __device__ __noinline__ static void noop() { asm(""); }
 #endif
 
 #include "parameters.cuh"
-#include "kernels.cu"
+#include "kernels.cuh"
 
 #ifdef noop
 # undef noop

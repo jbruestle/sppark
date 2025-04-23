@@ -347,11 +347,11 @@ void coalesced_store(fr_t* inout, index_t idx, const fr_t r[z_count],
 }
 
 #if defined(FEATURE_BABY_BEAR) || defined(FEATURE_GOLDILOCKS)
-# include "kernels/gs_mixed_radix_narrow.cu"
-# include "kernels/ct_mixed_radix_narrow.cu"
+# include "kernels/gs_mixed_radix_narrow.cuh"
+# include "kernels/ct_mixed_radix_narrow.cuh"
 #else // 256-bit fields
-# include "kernels/gs_mixed_radix_wide.cu"
-# include "kernels/ct_mixed_radix_wide.cu"
+# include "kernels/gs_mixed_radix_wide.cuh"
+# include "kernels/ct_mixed_radix_wide.cuh"
 #endif
 
 #endif /* __NTT_KERNELS_CU__ */
